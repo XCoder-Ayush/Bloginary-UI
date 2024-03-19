@@ -10,7 +10,7 @@ const commentContainer=document.querySelector('.comments-container')
 
 commentIconWrapper.addEventListener('click',()=>{
     // console.log('Here');
-    commentContainer.style.display='flex'
+    commentContainer.style.display='flex';
 })
 
 
@@ -49,6 +49,7 @@ commentIcon.addEventListener("click", function() {
     
 })
 
+const authorName = document.querySelector(".blog-writer");
 function addComment() {
     const commentInput = document.getElementById("commentInput");
     const commentText = commentInput.value;
@@ -64,8 +65,18 @@ function addComment() {
         commentImage.setAttribute('src', imageUrl);
         
         const commentDiv= document.createElement("div");
-        commentDiv.textContent = commentText;
+        // commentDiv.textContent = commentText;
+        commentDiv.classList.add("post-comment-textarea");
+        const author = document.createElement("div");
+        author.textContent = authorName.textContent;
+        const text = document.createElement("div");
+        text.textContent = commentText;
+        const timeStamp = document.createElement("div");
         
+        
+        commentDiv.appendChild(author);
+        commentDiv.appendChild(text);
+        commentDiv.appendChild(timeStamp);
         newComment.appendChild(commentImage);
         newComment.appendChild(commentDiv);
         commentList.appendChild(newComment);
