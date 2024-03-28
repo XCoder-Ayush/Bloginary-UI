@@ -34,14 +34,15 @@ body {
   }
   
   input[type="text"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="email"] {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
   }
   
-  button {
+  #reg-btn {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -50,9 +51,13 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 20px;
   }
   
-  button:hover {
+  #reg-btn:hover {
     background-color: #0056b3;
   }
-  
+  #reg-btn:active {
+    background-color: #0056b3;
+    transform: scale(95%);
+  }
